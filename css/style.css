@@ -1,0 +1,189 @@
+:root { /*css 변수*/
+    --text-color: #f0f4f5;
+    --background-clor: #263343;
+    --accent-color: pink;
+    --main-body-page-color: skyblue;
+    --main-body-font-color: black;
+    --main-body-font-style: normal;
+    --a-font-text-color: #d49466;
+}
+
+body{
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+    background: url(../img/PageBackground.jpg);
+}
+
+a{
+    text-decoration: none;
+    color: var(--a-font-text-color)
+}
+
+a:hover{
+    background-color: greenyellow;
+    border-radius: 4px; /*조금 둥그렇게 하기*/
+}
+
+.Coloth_Select_Data{
+    width: 100%;
+    height: 80%;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #263343;
+    padding:  8px 12px;
+}
+
+.navbar_logo{
+    font-size: 24px;
+    color: white;
+}
+
+.navbar_logo i{ 
+    color: #d49466; /*로고 색상*/
+}
+
+.navbar_menu{
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+}
+
+.navbar_menu li{
+    padding: 8px 12px; /*메뉴 리스트 간 간격*/
+}
+
+.navbar_icons{
+    list-style: none;
+    color: white;
+    display: flex;
+    padding-left: 0;
+}
+
+.navbar_icons li{
+    padding: 8px 12px;
+}
+
+.navbar_menu li:hover{ /*메뉴 리스트에 마우스를 hover했을 때*/
+    background-color: greenyellow;
+    border-radius: 4px; /*조금 둥그렇게 하기*/
+}
+
+.navbar_toogleBtn{/*햄버거 버튼*/
+    display: none;
+    position: absolute;
+    right: 32px;
+    font-size: 24px;
+    color: #d49466;
+}
+
+/*main body full size*/
+.mainbody{
+    padding-left: 5%;
+    padding-right: 5%;
+    align-items: center;
+    height: auto;
+}
+
+.container1{
+    flex-basis: 0;
+    background-color: var(--main-body-page-color);
+    border-radius: 2px;
+    grid-auto-rows: minmax(200px, auto);
+    border-width: small;
+    border-color: white;
+    display: grid;
+    grid-template-columns: 30% 40% 30%;
+    grid-template-rows: 100%;
+}
+
+.container2{
+    flex-basis: 0;
+    background-color: var(--main-body-page-color);
+    border-radius: 2px;
+    height: 3000px;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 30%, 30%, 30%, 10%;
+}
+
+iframe{
+    width: 100%;
+    height: 1300px;
+    padding-bottom: 5px;
+}
+
+.Footer{
+    background-color: yellowgreen;
+    color: blue;
+}
+
+
+/*반응형 웹페이지 구현 모바일(768px) + 반페이지(*/
+    /*header 반응형 구현*/
+@media screen and (max-width: 1000px){
+    .navbar{
+        position: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding:  8px 24px;
+        font-size: 36px;
+    }
+
+    .navbar_menu{
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .navbar_menu li{
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar_icons{
+        justify-content: center;
+        width: 100%;
+        display: none;
+    }
+
+    .navbar_toogleBtn{
+        
+        display: block;
+    }
+
+    .navbar_menu.active,
+    .navbar_icons.active {
+        display: flex;
+    }
+
+    /*mainBody의 모바일 사이즈 반응형 구현*/
+    .mainbody
+    {
+        padding-left: 0px;
+        padding-right: 0px;
+        font-size: 48px;
+    }
+
+    .container1{
+        display: flex;
+        flex-direction: column;
+        color: var(--main-body-font-color);
+        background-color: var(--main-body-page-color);
+        font-style: var(--main-body-font-style);
+        flex-wrap: nowrap;
+    }
+
+    .container2{
+        display: flex;
+        flex-direction: column;
+        color: var(--main-body-font-color);
+        background-color: var(--main-body-page-color);
+        font-style: var(--main-body-font-style);
+        flex-wrap: nowrap;
+    }
+}

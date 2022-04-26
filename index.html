@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/06dca14097.js" crossorigin="anonymous"></script>
+    <script src="app/main.js" defer></script>
+    <title>내가 느낀 날씨</title>
+</head>
+<body>
+    <!--header-->
+    <nav class="navbar" id="Header">
+        <div class="navbar_logo">
+            <i class="fa-solid fa-cloud-sun-rain"></i> <!--어썸폰트에서 가져온 아이콘-->
+            <a href="">날씨 느낌</a>
+        </div>
+        
+        <ul class="navbar_menu">
+            <li><a href="#QuickInfor">빠른 날씨 정보</a></li>
+            <li><a href="#ClothSelect">복장 권고</a></li>
+            <li><a href="#SameWeather">비슷한 날씨</a></li>
+            <li><a href="#KoreanWeather">한국 기상청</a></li>
+            <li><a href="#AccuWeather">Accu Weather</a></li>
+            <li><a href="#OpenWeather">Open Weatr</a></li>
+        </ul>
+
+        <ul class="navbar_icons">
+            <li>
+                <a href="https://www.youtube.com/watch?v=X91jsJyZofw&list=PLn1RGaGHQes8Ozgrc0zBsBw8_27I90irL&index=3&t=1022s"><i class="fa-brands fa-youtube"></i></a>
+            </li>
+        </ul>
+        <a href="#" class="navbar_toogleBtn">
+            <i class="fa-solid fa-bars"></i>
+        </a>
+    </nav><p>
+
+    <!--main body-->
+    <div class="mainbody">
+        <div class="container1">
+            <div class="container_QuickInfor" id="QuickInfor">
+                <h2>빠른 날씨 정보</h2>
+                <CENTER><img class="weatherIcon"></CENTER><p>
+                <span class="weatherInfo"></span>
+            </div>
+            <div class="container_ClothSelect" id="ClothSelect">
+                <h2>복장 권고</h2><a href="#Header">위로가기</a>
+                <img class="Coloth_Select_Data" src="img/Data.jpg">
+            </div>
+            <div class="container_SameWeather" id="SameWeather">
+                <h2>비슷한 날씨</h2><p><a href="#Header">위로가기</a>
+                <iframe src="https://m.blog.naver.com/PostView.nhn?isHttpsRedirect=true&blogId=a343439&logNo=221851697920&categoryNo=10&proxyReferer="></iframe>
+                <!-- 위키백과 국가별 평균온도
+                <iframe src="https://ko.wikipedia.org/wiki/%EC%97%B0%EA%B0%84_%ED%8F%89%EA%B7%A0_%EA%B8%B0%EC%98%A8%EC%97%90_%EB%94%B0%EB%A5%B8_%EB%82%98%EB%9D%BC_%EB%AA%A9%EB%A1%9D"></iframe>
+                -->
+            </div>
+        </div> 
+        <div class="container2">
+            <div class="container_KoreanWeather" id="KoreanWeather">
+                <h2>[ 한국 기상청: 단기예보 ] </h2><a href="#Header">위로가기</a><p>
+                <iframe src="https://www.weather.go.kr/w/weather/forecast/short-term.do"></iframe>
+            </div>
+            <div class="container_AccuWeather" id="AccuWeather">
+                <h2>[ Accu weather: 한국날씨 ] </h2><a href="#Header">위로가기</a><p>
+                <iframe src="https://www.accuweather.com/"></iframe>
+            </div>
+            <div class="container_OpenWeather" id="OpenWeather">
+                <h2>[ Open weather: 날씨검색 ]  </h2><a href="#Header">위로가기</a><p>
+                <iframe src="https://openweathermap.org/"></iframe>
+            </div>
+            <div class="Footer" id="Footer">
+                <img src="img/lablogo_nogb40.png">
+                (광고) 이창현 코딩연구소....  좋은 교육, 좋은 교재, 좋은 프로그래머!: <p>
+                연락처: (전화)000 - 0000 - 0000, (메일)IamEmail@email.com
+            </div>
+        </div>
+    </div>
+</body>
+</html>
